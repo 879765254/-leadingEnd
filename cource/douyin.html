@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iconfont.css">
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			a {
+				text-decoration: none;
+				color: black;
+			}
+			
+			.header {
+				height: 60px;
+				/*background-color: darkgoldenrod;*/
+			}
+			
+			.header>ul {
+				list-style: none;
+				text-align: center;
+				line-height: 60px;
+				height: 60px;
+				/*padding-right:20px ;*/
+			}
+			
+			.header>ul>.left {
+				float: left;
+				width: 110px;
+				height: 60px;
+				/*background-color: blueviolet;*/
+			}
+			
+			.header>ul>.picture {
+				width: 200px;
+				margin-left: 138px;
+				/*line-height: 60px;*/
+			}
+			
+			.header>ul>.long {
+				width: 150px;
+				position: relative;
+			}
+			
+			.header>ul>.long>ul {
+				width: 100px;
+				background-color: gray;
+				position: absolute;
+				top:60px;
+				left: 0px;
+				list-style: none;
+				display: block;
+			}
+			.header>ul>.long:hover>ul{
+				display: block;
+			}
+			.header>ul>.long>ul>li>ul{
+				/*display: none;*/
+				width: 100px;
+				position: absolute;
+				top: 0px;
+				left: 100px;
+				background-color: gray;
+				list-style: none;
+			}
+			.header>ul>.long>ul>.solve{
+				position: relative;
+				top:-60px;
+				right: 0px;
+			}
+			.header>ul>.long:hover>ul>.solve>ul{
+				display: block;
+			}
+			.header>ul>.long>ul>.solve>ul{
+				display: none;
+			}
+			.header>ul>.long>ul>.solve:hover>ul{
+				display: block;
+			}
+			.header>ul>.long>ul>.great{
+				position: relative;
+				top: 60px;
+				right: 0px;
+			}
+			.header>ul>.long>ul>.great>ul{
+				display: block;
+				position: relative;
+				top:-50px;
+				right: 0px;
+				
+			}
+			.header>ul>.long>ul>.great:hover>ul{
+				display: block;
+			}
+			.header>ul>.long>ul>.great:hover+li>ul{
+				display: none;
+			}
+			
+			.header>ul>.left>a>img {
+				height: 40px;
+				margin-top: 10px;
+			}
+			
+			.header>ul>.right {
+				float: right;
+				width: 70px;
+				height: 20px;
+				margin-top: 20px;
+				font-size: 13px;
+				line-height: 20px;
+				/*background-color: salmon;*/
+			}
+			
+			.header>ul>.regesiter {
+				border-left: 1px solid grey;
+				margin-right: 20px;
+			}
+			
+			.header>ul>.login {
+				width: 110px;
+			}
+			
+			.header>ul>.login>span {
+				margin-right: 14px;
+			}
+			
+			.header>ul>.login>a>span {
+				margin-right: 14px;
+			}
+			
+			.header>ul>.login>.user {
+				/*display: inline-block;*/
+				/*margin-top: 20px;*/
+				/*line-height: 20px;*/
+				/*font-size: 25px;*/
+			}
+			
+			.contain {
+				width: 1000px;
+				height: 3228px;
+				/*background-color: yellowgreen;*/
+				margin: auto;
+			}
+			
+			.contain>.sdk {
+				width: 1000px;
+				height: 334px;
+				/*background-color: sandybrown;*/
+			}
+			
+			.contain>.sdk>.sdk-top {
+				width: 1000px;
+				height: 150px;
+				/*background-color: sandybrown;*/
+				text-align: center;
+				line-height: 150px;
+				font-size: 30px;
+			}
+			
+			.contain>.sdk>.sdk-bottom {
+				width: 1000px;
+				height: 184px;
+				/*background-color: aquamarine;*/
+			}
+			
+			.contain>.sdk>.sdk-bottom>ul {
+				width: 1000px;
+				height: 184px;
+			}
+			
+			.contain>.sdk>.sdk-bottom>ul>li {
+				width: 333px;
+				height: 184px;
+				float: left;
+				list-style: none;
+				text-align: center;
+			}
+			
+			.contain>.sdk>.sdk-bottom>ul>li>a>.img {
+				width: 333px;
+				height: 114px;
+				line-height: 114px;
+				/*background-color: cadetblue;*/
+			}
+			
+			.contain>.sdk>.sdk-bottom>ul>li>a>.text {
+				width: 333px;
+				height: 70px;
+				/*background-color: aquamarine;*/
+			}
+			
+			.contain>.sdk>.sdk-bottom>ul>li>a>.text>h1 {
+				font-weight: normal;
+				font-size: 18px;
+				margin-top: 10px;
+			}
+			
+			.contain>.sdk>.sdk-bottom>ul>li>a>.text>span {
+				color: grey;
+				font-size: 12px;
+				margin-top: 7px;
+			}
+			
+			.contain>.api {
+				width: 1000px;
+				height: 686px;
+				/*background-color: salmon;*/
+				margin-top: 132px;
+			}
+			
+			.contain>.api>.api-top {
+				width: 1000px;
+				height: 146px;
+				/*background-color: salmon;*/
+				text-align: center;
+				line-height: 146px;
+				font-size: 28px;
+			}
+			
+			.contain>.api>.api-bottom {
+				width: 1000px;
+				height: 540px;
+				/*background-color: blueviolet;*/
+			}
+			
+			.contain>.api>.api-bottom>ul {
+				width: 1000px;
+				height: 540px;
+			}
+			
+			.contain>.api>.api-bottom>ul>li {
+				width: 236px;
+				height: 259px;
+				margin-right: 18px;
+				margin-bottom: 22px;
+				/*background-color: forestgreen;*/
+				float: left;
+				list-style: none;
+			}
+			
+			.contain>.api>.api-bottom>ul>.down {
+				margin-bottom: 0px;
+			}
+			
+			.contain>.api>.api-bottom>ul>.last {
+				margin-right: 0px;
+			}
+			
+			.contain>.api>.api-bottom>ul>li>a>.img {
+				width: 236px;
+				height: 129px;
+				text-align: center;
+				/*background-color: darkcyan;*/
+			}
+			
+			.contain>.api>.api-bottom>ul>li>a>.img>img {
+				margin-top: 50px;
+			}
+			
+			.contain>.api>.api-bottom>ul>li>a>.text {
+				width: 236px;
+				height: 130px;
+				/*background-color: aquamarine;*/
+				text-align: center;
+			}
+			
+			.contain>.api>.api-bottom>ul>li>a>.text>h1 {
+				font-weight: normal;
+				font-size: 20px;
+				/*margin-top: 10px;*/
+			}
+			
+			.contain>.api>.api-bottom>ul>li>a>.text>span {
+				color: grey;
+				font-size: 14px;
+				margin-top: 10px;
+				display: inline-block;
+			}
+			
+			.contain>.program {
+				width: 1000px;
+				height: 686px;
+				/*background-color: sandybrown;*/
+				margin-top: 150px;
+			}
+			
+			.contain>.program>.program-top {
+				width: 1000px;
+				height: 150px;
+				text-align: center;
+				line-height: 150px;
+				font-size: 30px;
+				/*background-color: greenyellow;*/
+			}
+			
+			.contain>.program>.program-bottom {
+				width: 1000px;
+				height: 536px;
+				/*background-color: darkcyan;*/
+			}
+			
+			.contain>.program>.program-bottom>ul {
+				width: 1000px;
+				height: 536px;
+			}
+			
+			.contain>.program>.program-bottom>ul>li {
+				width: 321px;
+				height: 259px;
+				margin-right: 18px;
+				margin-bottom: 18px;
+				/*background-color: darkkhaki;*/
+				float: left;
+				list-style: none;
+			}
+			
+			.contain>.program>.program-bottom>ul>.down {
+				margin-bottom: 0px;
+			}
+			
+			.contain>.program>.program-bottom>ul>.last {
+				margin-right: 0px;
+			}
+			
+			.contain>.program>.program-bottom>ul>li>.img {
+				width: 321px;
+				height: 129px;
+				text-align: center;
+				/*background-color: saddlebrown;*/
+			}
+			
+			.contain>.program>.program-bottom>ul>li>.img>img {
+				margin-top: 10px;
+			}
+			
+			.contain>.program>.program-bottom>ul>li>.text {
+				width: 321px;
+				height: 130px;
+				/*background-color: seagreen;*/
+				text-align: center;
+			}
+			
+			.contain>.program>.program-bottom>ul>li>.text>h1 {
+				font-weight: normal;
+				font-size: 20px;
+			}
+			
+			.contain>.program>.program-bottom>ul>li>.text>span {
+				color: grey;
+				font-size: 12px;
+			}
+			
+			.contain>.operation {
+				width: 1000px;
+				height: 370px;
+				/*background-color: darkcyan;*/
+				margin-top: 120px;
+			}
+			
+			.contain>.operation>.operation-top {
+				width: 1000px;
+				height: 185px;
+				text-align: center;
+				line-height: 185px;
+				font-size: 28px;
+				/*background-color: darkcyan;*/
+			}
+			
+			.contain>.operation>.operation-bottom {
+				width: 1000px;
+				height: 185px;
+				/*background-color: darkcyan;*/
+			}
+			
+			.contain>.operation>.operation-bottom>ul {
+				width: 1000px;
+				height: 185px;
+			}
+			
+			.contain>.operation>.operation-bottom>ul>li {
+				width: 333px;
+				height: 185px;
+				float: left;
+				list-style: none;
+				text-align: center;
+			}
+			
+			.contain>.operation>.operation-bottom>ul>li>.img {
+				width: 333px;
+				height: 93px;
+				/*background-color: salmon;*/
+			}
+			
+			.contain>.operation>.operation-bottom>ul>li>.text {
+				width: 333px;
+				height: 92px;
+				/*background-color: darkgoldenrod;*/
+			}
+			
+			.contain>.operation>.operation-bottom>ul>li>.text>h1 {
+				font-weight: normal;
+				font-size: 20px;
+			}
+			
+			.contain>.other {
+				width: 1000px;
+				height: 600px;
+				/*background-color: salmon;*/
+				margin-top: 150px;
+			}
+			
+			.contain>.other>.other-top {
+				width: 1000px;
+				height: 200px;
+				text-align: center;
+				line-height: 200px;
+				font-size: 28px;
+				/*background-color: darkcyan;*/
+			}
+			
+			.contain>.other>.other-bottom {
+				width: 1000px;
+				height: 400px;
+				text-align: center;
+				/*background-color: darkcyan;*/
+			}
+			
+			.contain>.other>.other-bottom>ul {
+				width: 1000px;
+				height: 400px;
+			}
+			
+			.contain>.other>.other-bottom>ul>li {
+				width: 333px;
+				height: 200px;
+				list-style: none;
+				float: left;
+			}
+			
+			.contain>.other>.other-bottom>ul>li>.img {
+				width: 333px;
+				height: 100px;
+				/*background-color: saddlebrown;*/
+			}
+			
+			.contain>.other>.other-bottom>ul>li>.img>img {
+				margin-top: 10px;
+			}
+			
+			.contain>.other>.other-bottom>ul>li>.text {
+				width: 333px;
+				height: 100px;
+				/*background-color: skyblue;*/
+			}
+			
+			.contain>.other>.other-bottom>ul>li>.text>h1 {
+				font-weight: normal;
+				font-size: 20px;
+			}
+			
+			.footer {
+				height: 200px;
+				text-align: center;
+				color: white;
+				background-color: black;
+			}
+			
+			.footer>.information {
+				height: 100px;
+				padding-top: 50px;
+			}
+			
+			.footer>.information>span {
+				margin-right: 10px;
+			}
+			
+			.footer>.information>span>a {
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+
+			<ul>
+				<li class="left picture">
+					<a href="https://open.douyin.com/platform"><img src="http://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/imgs/logo-text.png" alt="" /></a>
+				</li>
+				<li class="left">
+					<a href="https://open.douyin.com/platform">首页</a>
+				</li>
+				<li class="left long">
+					<a href="">解决方案与案例</a><span class="iconfont icon-unie628"></span>
+					<ul>
+						
+						<li class="great">优秀案例
+							<ul >
+								<li>开发者案例</li>
+								<li>服务商案例</li>
+							</ul>
+
+						</li>
+						<li class="solve">解决方案
+							<ul >
+								<li>媒体行业</li>
+								<li>娱乐行业</li>
+								<li>游戏行业</li>
+								<li>教育行业</li>
+								<li>电商行业</li>
+								<li>硬件行业</li>
+								<li>编辑工具行业</li>
+								<li>生活服务行业</li>
+							</ul>
+
+						</li>
+					</ul>
+				</li>
+				<li class="left">
+					<a href="https://open.douyin.com/platform/doc">资源中心</a>
+				</li>
+				<li class="left">
+					<a href="https://open.douyin.com/platform">管理中心</a>
+				</li>
+				<li class="left">
+					<a href="">开放服务</a><span class="iconfont icon-unie628"></span></li>
+				<li class="left">
+					<a href="https://open.douyin.com/platform/isv">服务市场</a>
+				</li>
+				<li class="right regesiter">
+					<a href="">注册</a>
+				</li>
+				<li class="right login">
+					<a href=""><span class="iconfont icon-fangdajing"></a></span><span class="iconfont icon-yonghudenglurenmianxing
+ 
+ user"></span>
+						<a href="">登录</a>
+				</li>
+
+			</ul>
+		</div>
+		<div class="contain">
+			<div class="sdk">
+				<div class="sdk-top">客户端SDK</div>
+				<div class="sdk-bottom">
+					<ul>
+						<li>
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_172_1581922099543.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>iOS SDK</h1>
+									<span>包含抖音授权登录和分享功能</span>
+								</div>
+							</a>
+
+						</li>
+						<li>
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_171_1581922099420.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>Android SDK</h1>
+									<span>包含抖音授权登录和分享功能</span>
+								</div>
+							</a>
+
+						</li>
+						<li>
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/icon/js.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>JS SDK</h1>
+									<span>包含抖音授权登录等功能</span>
+								</div>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="api">
+				<div class="api-top">Open Api</div>
+				<div class="api-bottom">
+					<ul>
+						<li>
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_200_1581922099342.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>帐号授权</h1>
+									<span>包含抖音帐号授权登录与授权绑定的能力</span>
+								</div>
+							</a>
+
+						</li>
+						<li>
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_201_1581922099340.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>用户管理</h1>
+									<span>包含用户的基础信息以及关系链相关数据的获取</span>
+								</div>
+							</a>
+
+						</li>
+						<li>
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_202_1581922099375.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>视频管理</h1>
+									<span>包含抖音、西瓜、头条视频的发布以及相关数据的获取能力</span>
+								</div>
+							</a>
+
+						</li>
+						<li class="last">
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_203_1581922099389.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>互动管理</h1>
+									<span>包含私信收发以及评论管理的能力</span>
+								</div>
+							</a>
+
+						</li>
+						<li class="down">
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/tiktok.open/doc/openapi/search.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>搜索管理</h1>
+									<span>包含通过关键词获取抖音视频及该视频下评论，并进行回复的能力</span>
+								</div>
+							</a>
+
+						</li>
+						<li class="down">
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/tiktok.open/doc/openapi/data.svg.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>数据开放服务</h1>
+									<span>包含用户授权后的公开用户数据，视频数据等能力</span>
+								</div>
+							</a>
+
+						</li>
+						<li class="down">
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_205_1581922099558.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>企业号开放能力</h1>
+									<span>包含企业号意向用户、企业消息卡片、团购活动等的管理能力</span>
+								</div>
+							</a>
+
+						</li>
+						<li class="last down">
+							<a href="">
+								<div class="img">
+									<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_204_1581922099538.svg" alt="" />
+								</div>
+								<div class="text">
+									<h1>生活服务开放能力</h1>
+									<span>包含商铺/商品库/交易系统等能力的开放接入</span>
+								</div>
+							</a>
+
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="program">
+				<div class="program-top">小程序</div>
+				<div class="program-bottom">
+					<ul>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/tiktok.open/doc/access.svg" alt="" />
+							</div>
+							<div class="text">
+								<h1>接入流程</h1>
+								<span>小程序对企业账号及个人账号开放，一次开发可在字节跳动系APP上同时运用</span>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/tiktok.open/doc/entry.svg" alt="" />
+							</div>
+							<div class="text">
+								<h1>流量入口</h1>
+								<span>文章、视频、直播等多种体裁可按内容需求和相关性挂载小程序，实现内容到服务的用户升级需求满足</span>
+							</div>
+						</li>
+						<li class="last">
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/tiktok.open/doc/API.svg" alt="" />
+							</div>
+							<div class="text">
+								<h1>API</h1>
+								<span>字节小程序开发框架提供了丰富的原生 API 和 开放能力 API，开发者可方便快捷地调用这些 API完成业务逻辑</span>
+							</div>
+						</li>
+						<li class="down">
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/tiktok.open/doc/component.svg" alt="" />
+							</div>
+							<div class="text">
+								<h1>组件</h1>
+								<span>小程序框架为开发者提供了一系列基础组件，开发者可以通过组合这些基础组件进行业务开发</span>
+							</div>
+						</li>
+						<li class="down">
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/tiktok.open/doc/ability.svg" alt="" />
+							</div>
+							<div class="text">
+								<h1>开放能力</h1>
+								<span>字节小程序为满足开发者的业务诉求，将主要的业务能力开放出来，开发者的小程序快速完成与字节服务端的交互</span>
+							</div>
+						</li>
+						<li class="last down">
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/tiktok.open/doc/regulation.svg" alt="" />
+							</div>
+							<div class="text">
+								<h1>运营规范</h1>
+								<span>开发者根据文档中的规范自行开发小程序，经审核后即可上架，上架后的小程序可在丰富的场景中配置展示</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="operation">
+				<div class="operation-top">运营中心</div>
+				<div class="operation-bottom">
+					<ul>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/icon/punish-notice.svg" alt="" />
+							</div>
+							<div class="text">
+								<h1>运营规范</h1>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/icon/punish-rule.svg" alt="" />
+							</div>
+							<div class="text">
+								<h1>处罚规则</h1>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ies-douyin-opencn/icon/punish-standard.svg" alt="" />
+							</div>
+							<div class="text">
+								<h1>处罚公告</h1>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="other">
+				<div class="other-top">其他</div>
+				<div class="other-bottom">
+					<ul>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_207_1581922099391.svg" />
+							</div>
+							<div class="text">
+								<h1>状态码</h1>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_208_1581922099558.svg" />
+							</div>
+							<div class="text">
+								<h1>沙盒环境</h1>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_210_1581922099545.svg" />
+							</div>
+							<div class="text">
+								<h1>Webhooks</h1>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_212_1581922099404.svg" />
+							</div>
+							<div class="text">
+								<h1>素材上传</h1>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_214_1581922099390.svg" />
+							</div>
+							<div class="text">
+								<h1>开发者工具</h1>
+							</div>
+						</li>
+						<li>
+							<div class="img">
+								<img src="https://sf3-ttcdn-tos.pstatp.com/obj/ttfe/open/doc_icons/Group_216_1581922099402.svg" />
+							</div>
+							<div class="text">
+								<h1>反馈与帮助</h1>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<div class="information">
+				<span>|</span><span><a href="https://open.douyin.com/platform/agreement/developerServiceAgreement">开发者服务协议</a></span><span>|</span><span><a href="https://www.douyin.com/agreements/?id=6773906068725565448">用户服务协议</a></span><span>|</span><span><a href="https://open.douyin.com/platform/agreement/marketAgreement">服务市场服务商协议</a></span><span>|</span><span><a href="https://www.douyin.com/agreements/?id=6773901168964798477">隐私政策</a></span><span>|</span><span><a href="https://www.douyin.com/recovery_account/">帐号找回</a></span><span>|</span><span><a href="https://www.douyin.com/aboutus/">联系我们</a></span><br /><br />
+				<span>|</span><span><a href="">2020 © 抖音</a></span><span>|</span><span><a href="">京ICP备16016397号</a>-3</span><span>|</span><span><a href="">北京微播视界科技有限公司</a></span><br />
+				<span>|</span><span><a href="https://www.12377.cn/">中国互联网举报中心</a></span><span>|</span><span><a href="">网络文化许可证-京网文-（2016）2282-264号</a></span><span>|</span><span><a href="">违法和不良信息举报：400-140-2108</a></span><span>|</span><span><a href="">举报邮箱：jubao@douyin.com</a></span><br />
+				<img src="//s3.pstatp.com/aweme/resource/web/static/image/gongan_d0289dc.png" alt="" /><span><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802023605">京公网安备11010802023605号</a></span><span>|</span><span><a href="">地址: 北京市海淀区知春路51号4层408</a></span>
+			</div>
+		</div>
+	</body>
+
+</html>

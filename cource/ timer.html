@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>0</div>
+		<button>停止</button>
+		<script>
+			var divs=document.getElementsByTagName("div");
+			var btn=document.getElementsByTagName("button");
+			var num=parseInt(divs[0].innerHTML);
+			var timer=setInterval(function(){
+				divs[0].innerHTML=num;
+				num++;
+			},100);
+			btn[0].onclick=function(){
+				clearInterval(timer);
+			}
+		</script>
+	</body>
+</html>

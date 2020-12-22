@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;			
+			}
+			form{
+				/*width: 200px;
+				margin: auto;*/
+			}
+			form>input{
+				/*display: inline-block;
+				margin: auto;*/
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" method="get">
+			<label for="user">用户名</label><input type="text" id="user" name="user" autofocus="" required=""/><br />
+			<label for="password">密码</label><input type="password" id="password" name="password"/><br />
+			<label for="phone">手机号</label><input type="number" id="phone" name="phone"/><br />
+			所在地:
+			<select name="city" id="">
+				<option value="a">a市</option>
+				<option value="b">b市</option>
+				<option value="c">c市</option>
+				<option value="d">d市</option>
+			</select><br />
+			性别：
+			<input type="radio" name="sex" value="man"/>男<input type="radio" name="sex" value="woman"/>女<br />
+			爱好：
+			<input type="checkbox" name="hobby" value="1"/>爱好1<input type="checkbox" name="hobby" value="2"/>爱好2<input type="checkbox" name="hobby" value="3"/>爱好3<br />
+			自我评价：
+			<textarea name="self" rows="10" cols="100"></textarea><br />
+			<input type="submit" /><br />
+			<input type="reset" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src="img/1.jpg" alt="" />
+		<img src="img/2.jpg" alt="" />
+		<button>按钮</button>
+		
+		<script>
+			var imgs=document.getElementsByTagName("img");
+			var buttons=document.getElementsByTagName("button");
+			buttons[0].onclick=function(){
+				var src1=imgs[0].getAttribute("src");
+				var src2=imgs[1].getAttribute("src");
+				imgs[0].setAttribute("src",src2);
+				imgs[1].setAttribute("src",src1);
+			}
+		</script>
+	</body>
+</html>

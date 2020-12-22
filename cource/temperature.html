@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+//			var degreeCentigrade=prompt("请输入摄氏度");
+//			var fahrenheitDegree=9/5*degreeCentigrade+32;
+//			console.log(fahrenheitDegree);
+//			var a=324-34;
+//			var result=(123+45*78)/(34-543)-9*a;
+//			
+//			console.log(result);
+//			var number=prompt("请输入一位三位数");
+//			var hundreds=parseInt(number/100);
+//			var tens=parseInt((number%100)/10);
+//			var units=number%10;
+//			console.log(hundreds+tens+units);
+//			for(var i=1;i<1001;i++){
+//				if(i%5==0||i%6==0){
+//					console.log(i);
+//				}
+//			}
+//			for(i=1;i<61;i++){
+//				if(i%7!=0&&i%10!=7){
+//					console.log(i);
+//				}
+//			}
+			var workingAge=prompt("请输入工龄");
+			var salary=prompt("请输入工资");
+			var yearEndBonus;
+			if(workingAge<1){
+				if(salary>8000){
+					yearEndBonus=1.2*salary;
+				}else{
+					yearEndBonus=salary;
+				}
+			}else if(workingAge<2){
+				if(salary>10000){
+					yearEndBonus=1.7*salary;
+				}else{
+					yearEndBonus=1.5*salary;
+				}
+			}else{
+				if(salary>12000){
+					yearEndBonus=3.2*salary;
+				}else{
+					yearEndBonus=3*salary;
+				}
+			}
+			console.log(yearEndBonus);
+		</script>
+	</body>
+</html>

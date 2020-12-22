@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding:0;
+			}
+			div{
+				background-color: aquamarine;
+				margin:0 auto;
+			}
+			.head{
+				width: 1000px;
+				height: 80px;
+				margin-bottom: 10px;
+				text-align: center;
+				line-height: 80px;
+			}
+			.nav{
+				height: 50px;
+				margin-bottom: 10px;
+				text-align: center;
+				line-height: 50px;
+			}
+			.contain{
+				width: 1000px;
+				height: 840px;
+				margin-bottom: 10px;
+				background-color: transparent;
+				
+			}
+			.contain_top{
+				width: 1000px;
+				height: 330px;
+				margin-bottom: 10px;
+				text-align: center;
+				line-height: 330px;
+			}
+			.contain_bottom{
+				width:1000px;
+				height: 500px;
+				background-color: transparent;
+			}
+			.contain_bottom_left{
+				width: 280px;
+				height: 500px;
+				margin-right: 10px;
+				float: left;
+				overflow: hidden;
+				text-align: center;
+				line-height: 500px;
+			}
+			.contain_bottom_right{
+				width: 710px;
+				height: 500px;
+				float: left;
+				overflow: hidden;
+				background-color: transparent;
+			}
+			.contain_bottom_right_top{
+				width:710px;
+				height: 100px;
+				margin-bottom: 10px;
+				text-align: center;
+				line-height: 100px;
+			}
+			.contain_bottom_right_middle{
+				width: 710px;
+				height: 280px;
+				margin-bottom: 10px;
+				background-color: transparent;
+			}
+			.contain_bottom_right_bottom{
+				width: 710px;
+				height: 100px;
+				text-align: center;
+				line-height: 100px;
+			}
+			.contain_bottom_right_middle_left{
+				width: 200px;
+				height: 280px;
+				float: left;
+				overflow: hidden;
+				margin-right: 10px;
+				text-align: center;
+				line-height: 280px;
+			}
+			.contain_bottom_right_middle_right{
+				width: 500px;
+				height: 280px;
+				float: left;
+				overflow: hidden;
+				text-align: center;
+				line-height: 280px;
+				
+			}
+			.footer{
+				height: 300px;
+				text-align: center;
+				line-height: 300px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="head">高80</div>
+		<div class="nav">高50</div>
+		<div class="contain">
+			<div class="contain_top">高330</div>
+			<div class="contain_bottom">
+				<div class="contain_bottom_left">高500宽280</div>
+				<div class="contain_bottom_right">
+					<div class="contain_bottom_right_top">高100</div>
+					<div class="contain_bottom_right_middle">
+						<div class="contain_bottom_right_middle_left">内容</div>
+						<div class="contain_bottom_right_middle_right">内容 </div>
+					</div>
+					<div class="contain_bottom_right_bottom">高100</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="footer">高300</div>
+	</body>
+
+</html>
