@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div>ul>li>span{
+				float: right;
+			}
+			div>ul>li>.close{
+				background: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<ul>
+				<li>1<span>2013年9月1日</span><span class="close">x</span></li>
+				<li>2<span>2013年9月1日</span><span class="close">x</span></li>
+				<li>3<span>2013年9月1日</span><span class="close">x</span></li>
+				<li>4<span>2013年9月1日</span><span class="close">x</span></li>
+				<li>5<span>2013年9月1日</span><span class="close">x</span></li>
+			</ul>
+			<textarea name="" rows="10" cols="80"></textarea>
+			<button>发送</button>
+			<script>
+				var uls=document.getElementsByTagName("ul");
+				var textareas=document.getElementsByTagName("textarea");
+				var buttons=document.getElementsByTagName("button");
+				var closes=document.getElementsByClassName("close");
+				buttons[0].onclick=function(){
+					var date=new Date();
+					var new_li=document.createElement("li");
+					new_li.innerHTML=textareas[0].value+"<span>"+date.getFullYear()+"年"+date.getMonth()+"月"+date.getDay()+"日"+'</span><span class="close">x</span>';
+					uls[0].appendChild(new_li);
+					closes[closes.length-1].onclick=function(){
+						this.parentNode.parentNode.removeChild(this.parentNode);
+					}
+				}
+				for(var i=0;i<closes.length;i++){
+					closes[i].onclick=function(){
+						this.parentNode.parentNode.removeChild(this.parentNode);
+					}
+				}
+			</script>
+		</div>
+	</body>
+
+</html>
