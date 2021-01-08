@@ -1,0 +1,97 @@
+<<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.5.1.js"></script>
+		<style>
+			*{
+				margin:0px;
+				padding: 0px;
+			}
+			table,tr,th,td{
+				border: 1px solid black;
+				border-collapse:collapse;
+				text-align: center;
+			}
+			th{
+				width: 200px;
+			}
+			table>tbody>tr>td>.close{
+				background: red;
+			}
+			table>tbody>tr>td>.edit{
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="add">新增</span>
+		<span class="all">全选</span>
+		<span class="inver">反选</span>
+		<span class="del">删除</span>
+		<form action="">
+			用户名：<input type="text" />
+			手机号:<input type="text" />
+			住址：<input type="text" />
+		</form>
+		<table>
+			<thead>
+				<tr>
+					<th>选择</th>
+					<th>姓名</th>
+					<th>手机号</th>
+					<th>住址</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="checkbox" class="check"/></td>
+					<td>张三</td>
+					<td>18998523766</td>
+					<td>加速器</td>
+					<td><span class="close" onclick="del(this)">x</span><span class="edit" onclick="edit(this)">编辑</span></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="check"/></td>
+					<td>张四</td>
+					<td>18998523766</td>
+					<td>加速器</td>
+					<td><span class="close" onclick="del(this)">x</span><span class="edit" onclick="edit(this)">编辑</span></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="check"/></td>
+					<td>张五</td>
+					<td>18998523766</td>
+					<td>加速器</td>
+					<td><span class="close" onclick="del(this)">x</span><span class="edit" onclick="edit(this)">编辑</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<script>
+			$(".add").click(function(){
+				var new_tr=$("<tr><td><input type=\"checkbox\" class=\"check\"/></td><td>"+$("input").eq(0).val()+"</td><td>"+$("input").eq(1).val()+"</td><td>"+$("input").eq(2).val()+"</td><td><span class=\"close\" onclick=\"del(this)\">x</span><span class=\"edit\" onclick=\"edit(this)\">编辑</span></td></tr>");
+				$("tbody").prepend(new_tr);
+			});
+			function del(e){
+				$(e).parent().parent().remove();
+			}
+//			
+			function edit(e){
+				$(e).parent().parent().clone().html($("<td><input type=\"checkbox\" class=\"check\"/></td><td>"+$("input").eq(0).val()+"</td><td>"+$("input").eq(1).val()+"</td><td>"+$("input").eq(2).val()+"</td><td><span class=\"close\" onclick=\"del(this)\">x</span><span class=\"edit\" onclick=\"edit(this)\">编辑</span></td>")).replaceAll($(e).parent().parent());
+			}
+			$(".all").click(function(){
+				$(":checkbox").prop("checked",true);
+			});
+			$(".inver").click(function(){
+				$(":checkbox").each(function(i,e){
+					$(e).prop("checked",!$(e).prop("checked"));
+				});
+			});
+			$(".del").click(function(){
+				$(":checkbox").parent().parent().remove();
+			});
+		</script>
+	</body>
+</html>

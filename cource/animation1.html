@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.5.1.js"></script>
+		<style>
+			div{
+				width:200px;
+				height: 200px;
+				background-color: red;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<button>显示</button>
+		<button>隐藏</button>
+		<button>切换</button>
+		<button>变色</button>
+		<div></div>
+		<script>
+//			$("button").eq(0).click(function(){
+//				$("div").slideDown(1000);
+//			});
+//			$("button").eq(1).click(function(){
+//				$("div").slideUp(1000);
+//			});
+//			$("button").eq(2).click(function(){
+//				$("div").slideToggle(1000);
+//			});
+			$("button").eq(3).click(function(){
+//				$("div").css("margin-left","500px");
+//				animate     只可以用于设置  值为数值的样式
+				$("div").animate({"background-color":"blue"},2000);
+			})
+		</script>
+	</body>
+</html>

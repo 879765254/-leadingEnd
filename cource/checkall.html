@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.5.1.js"></script>
+	</head>
+	<body>
+		<input type="text" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<input type="checkbox" />
+		<button>全选</button>
+		<button>反选</button>
+		<button>全不选</button>
+		<script>
+			$("button").eq(0).click(function(){
+				$(":checkbox").prop("checked",true);
+			});
+			$("button").eq(1).click(function(){
+				$(":checkbox").each(function(index,element){
+					$(element).prop("checked",!$(element).prop("checked"));
+				});
+			});
+			$("button").eq(2).click(function(){
+				$(":checkbox").each(function(){
+					
+				})
+			});
+		</script>
+	</body>
+</html>

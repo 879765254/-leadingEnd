@@ -4,28 +4,208 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			.box {
+				width: 500px;
+				height: 300px;
+				/*border: 1px solid black;*/
+				margin: 100px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.box>.picture {
+				width: 2500px;
+				height: 300px;
+				list-style: none;
+				transition: 2s all;
+			}
+			
+			.box>.picture>li {
+				width: 500px;
+				height: 300px;
+				/*border: 1px solid black;*/
+				float: left;
+				box-sizing: border-box;
+			}
+			
+			.box>.picture>li>img {
+				width: 500px;
+				height: 300px;
+			}
+			
+			.box>span {
+				width: 30px;
+				height: 30px;
+				background: white;
+				display: inline-block;
+				text-align: center;
+				line-height: 30px;
+				position: absolute;
+				top: 50%;
+				margin-top: -15px;
+			}
+			
+			.box>span:hover {
+				background: grey;
+			}
+			
+			.box>.left {
+				left: 0px;
+				border-radius: 0px 10px 10px 0px;
+			}
+			
+			.box>.right {
+				right: 0px;
+				border-radius: 10px 0px 0px 10px;
+			}
+			
+			.box>.point {
+				width: 70px;
+				height: 10px;
+				position: absolute;
+				list-style: none;
+				left: 50%;
+				margin-left: -35px;
+				bottom: 50px;
+			}
+			
+			.box>.point>li {
+				width: 10px;
+				height: 10px;
+				margin-right: 5px;
+				background: white;
+				float: left;
+				border-radius: 50%;
+			}
+			
+			.box>.point>li:last-child {
+				margin-right: 0px;
+			}
+			
+			.box>.point>li:hover {
+				background: grey;
+			}
+		</style>
 	</head>
 
 	<body>
 		<div class="box">
-			<ul>
-				<li><img src="" alt="" /></li>
-				<li><img src="" alt="" /></li>
-				<li><img src="" alt="" /></li>
-				<li><img src="" alt="" /></li>
-				<li><img src="" alt="" /></li>
+			<ul class="picture">
+				<li><img src="img/01.jpg" alt="" /></li>
+				<li><img src="img/02.jpg" alt="" /></li>
+				<li><img src="img/03.jpg" alt="" /></li>
+				<li><img src="img/04.jpg" alt="" /></li>
+				<li><img src="img/05.jpg" alt="" /></li>
 			</ul>
-			<span class="left"></span>
-			<span class="right"></span>
+			<span class="left">&lt;</span>
+			<span class="right">&gt;</span>
 			<ul class="point">
-				<li></li>
+				<li style="background: grey;"></li>
 				<li></li>
 				<li></li>
 				<li></li>
 				<li></li>
 			</ul>
 		</div>
+		<script>
+			//js
+//			var boxs = document.getElementsByClassName("box");
+//			var pictures = document.getElementsByClassName("picture");
+//			var lefts = document.getElementsByClassName("left");
+//			var rights = document.getElementsByClassName("right");
+//			var points = document.getElementsByClassName("point");
+//			var lis = points[0].children;
+//
+//			var i = 0;
+//			var timer;
+			$(.point>)
+//			for(var k = 0; k < lis.length; k++) {
+//
+//				lis[k].setAttribute("sign", k);
+//
+//				lis[k].onclick = function() {
+//
+//					//					console.log(k)
+//					var index = this.getAttribute("sign");
+//					i = index;
+//					console.log(i);
+//					pictures[0].style.marginLeft = -500 * index + "px";
+//					for(var j = 0; j < lis.length; j++) {
+//						lis[j].style.background = "white"
+//					}
+//					this.style.background = "grey";
+//				}
+//			}
+//			lefts[0].onclick = function() {
+//				i--;
+//
+//				if(i == -1) {
+//					i = 4;
+//				}
+//				console.log(i);
+//				pictures[0].style.marginLeft = -500 * i + "px";
+//				for(var j = 0; j < lis.length; j++) {
+//					lis[j].style.background = "white";
+//				}
+//				lis[i].style.background = "grey";
+//
+//			}
+//			rights[0].onclick = function() {
+//				i++;
+//
+//				if(i == 5) {
+//					i = 0;
+//				}
+//				console.log(i);
+//				pictures[0].style.marginLeft = -500 * i + "px";
+//				for(var j = 0; j < lis.length; j++) {
+//					lis[j].style.background = "white";
+//				}
+//				lis[i].style.background = "grey";
+//
+//			}
+//
+//	
+//			timer = setInterval(function() {
+//				i++;
+//				if(i == 5) {
+//					i = 0;
+//				}
+//				console.log(i);
+//				pictures[0].style.marginLeft = -500 * i + "px";
+//				for(var j = 0; j < lis.length; j++) {
+//					lis[j].style.background = "white";
+//				}
+//				lis[i].style.background = "grey";
+//			}, 2000);
+//			boxs[0].onmouseout = function() {
+//				timer = setInterval(function() {
+//					i++;
+//					if(i == 5) {
+//						i = 0;
+//					}
+//					console.log(i);
+//					pictures[0].style.marginLeft = -500 * i + "px";
+//					for(var j = 0; j < lis.length; j++) {
+//						lis[j].style.background = "white";
+//					}
+//					lis[i].style.background = "grey";
+//				}, 2000);
+//			}
+//			boxs[0].onmouseover = function() {
+//				clearInterval(timer);
+//			}
+			
+			
 
+		
+		</script>
 	</body>
 
 </html>

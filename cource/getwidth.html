@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.5.1.js"></script>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			ul {
+				width: 790px;
+				border: 1px solid black;
+				margin: 100px auto;
+				position: relative;
+			}
+			
+			ul>li {
+				width: 250px;
+				position: absolute;
+				list-style: none;
+			}
+			
+			ul>li>img {
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul>
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/3.jpg" /></li>
+			<li><img src="img/4.jpg" /></li>
+			<li><img src="img/2.jpg" /></li>
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/3.jpg" /></li>
+			<li><img src="img/2.jpg" /></li>
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/3.jpg" /></li>
+			<li><img src="img/4.jpg" /></li>
+			<li><img src="img/2.jpg" /></li>
+
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/3.jpg" /></li>
+			<li><img src="img/2.jpg" /></li>
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/3.jpg" /></li>
+
+			<li><img src="img/2.jpg" /></li>
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/3.jpg" /></li>
+			<li><img src="img/2.jpg" /></li>
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/3.jpg" /></li>
+			<li><img src="img/4.jpg" /></li>
+			<li><img src="img/2.jpg" /></li>
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/1.jpg" /></li>
+			<li><img src="img/3.jpg" /></li>
+			<li><img src="img/2.jpg" /></li>
+		</ul>
+		<script>
+//						window.onload=function(){
+//							$("ul>li").each(function(i,e){
+//								if(i<3){
+//									$(e).css({"top":"0px","left":260*i+"px"});
+//								}else{
+//									console.log($("ul>li").eq(i-3).height());
+//				//					元素top = 上一个元素的高度  + 边距值  + 上一个元素的top值
+//									var Top = $("ul>li").eq(i-3).height()+10+parseInt($("ul>li").eq(i-3).css("top"));
+//									$(e).css({"top":Top+"px","left":260*(i%3)+"px"})
+//								}
+//							})
+//						}
+			window.onload = function() {
+				$("ul>li").each(function(i, e) {
+						if(i < 3) {
+							$(e).css({
+								"top": "0px",
+								"left": 260 * i + "px"
+							});
+						} else {
+							console.log($("ul>li").eq(i-3).height());
+							var top = $("ul>li").eq(i - 3).height() + 10 + parseInt($("ul>li").eq(i - 3).css("top"));
+							$(e).css({
+								"top": top + "px",
+								"left": 260 * (i % 3) + "px"
+							})
+						}
+					}
+				})
+			}
+		</script>
+	</body>
+
+</html>

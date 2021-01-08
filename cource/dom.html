@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<script src="js/jquery-3.5.1.js"></script>
+		<style>
+			li{
+				width: 200px;
+				height: 40px;
+				text-align: center;
+				line-height: 40px;
+				border: 1px solid black;
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<a href="">111</a>
+				<span>a</span>
+			</li>
+			<li>
+				<a href="">222</a>
+				<span>a</span>
+			</li>
+			<li>
+				<a href="">333</a>
+				<span>a</span>
+			</li>
+			<li>
+				<a href="">444</a>
+				<span>a</span>
+			</li>
+			<li>
+				<a href="">555</a>
+				<span>a</span>
+			</li>
+		</ul>
+		<script>
+			$("ul>li>a").click(function(event){
+				event.preventDefault();
+				$(this).css("background-color","#1E90FF").parent().siblings().children("a").css("background-color","white");
+			});
+		</script>
+	</body>
+</html>

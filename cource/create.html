@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<script>
+			var uls=document.getElementsByTagName("ul");
+			var new_li=document.createElement("li");
+			new_li.innerHTML=0;
+			uls[0].insertBefore(new_li,uls[0].children[0]);
+		</script>
+	</body>
+</html>

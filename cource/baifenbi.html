@@ -19,28 +19,29 @@
 				height: 60px;
 				padding: 10px 10%;
 				box-sizing: border-box;
-				background-color: rgb(180,180,180);
+				background-color: rgb(180, 180, 180);
 			}
 			
 			.nav {
 				width: 100%;
 				height: 40px;
 				/*margin: 10px auto;*/
-				background-color: rgb(155,155,155);
+				background-color: rgb(155, 155, 155);
 				border-radius: 10px;
 			}
 			
 			.nav>img {
 				height: 100%;
 			}
-			@media (min-width:960px){
-				.nav>ul{
+			
+			@media (min-width:960px) {
+				.nav>ul {
 					width: 70%;
 					height: 40px;
 					/*background-color: seagreen;*/
-					float:right;
+					float: right;
 				}
-				.nav>ul>li{
+				.nav>ul>li {
 					width: 20%;
 					height: 40px;
 					/*border: 1px solid black;*/
@@ -50,59 +51,60 @@
 					text-align: center;
 					line-height: 40px;
 				}
-				.nav>.btn{
+				.nav>.btn {
 					display: none;
 				}
 			}
-			@media (min-width:640px) and (max-width:960px){
-				.nav>ul{
+			
+			@media (min-width:640px) and (max-width:960px) {
+				.nav>ul {
 					display: none;
 				}
-				.nav>.btn{
+				.nav>.btn {
 					display: none;
 				}
 			}
-			@media (max-width:640px){
-				.nav>ul{
+			
+			@media (max-width:640px) {
+				.nav>ul {
 					display: none;
 				}
-				.nav>.btn{
+				.nav>.btn {
 					float: right;
 					height: 100%;
 					position: relative;
 				}
-				.nav>.btn>img{
+				.nav>.btn>img {
 					height: 100%;
-					
 				}
-				.nav>.btn>img:hover+ul{
+				.nav>.btn>img:hover+ul {
 					display: block;
 				}
-				.nav>.btn>ul{
+				.nav>.btn>ul {
 					display: none;
 					position: absolute;
 					top: 40px;
 					right: 0px;
 					overflow: hidden;
 				}
-				.nav>.btn>ul:hover{
+				.nav>.btn>ul:hover {
 					display: block;
 				}
-				.nav>.btn>ul>li{
+				.nav>.btn>ul>li {
 					list-style: none;
-					width:120px;
+					width: 120px;
 					height: 35px;
-					
 					z-index: 1;
 					background-color: darkgrey;
 					text-align: center;
 					line-height: 35px;
 				}
-				.nav>.btn>ul>li:hover{
+				.nav>.btn>ul>li:hover {
 					color: white;
 					background-color: grey;
 				}
 			}
+			
 			.contain {
 				width: 100%;
 				padding: 0px 10%;
@@ -114,7 +116,7 @@
 			.contain>ul {
 				width: 100%;
 				/*height: 30px;*/
-				background-color: rgb(200,200,200);
+				background-color: rgb(200, 200, 200);
 				overflow: hidden;
 				border-radius: 10px;
 			}
@@ -157,7 +159,7 @@
 			
 			.contain>ul>li>img {
 				width: 100%;
-				border-radius:10px;
+				border-radius: 10px;
 			}
 		</style>
 	</head>
@@ -172,7 +174,7 @@
 					<li>333</li>
 					<li>444</li>
 					<li>555</li>
-					
+
 				</ul>
 				<div class="btn">
 					<img src="img/列表.png" alt="" />
@@ -189,8 +191,12 @@
 			</div>
 		</div>
 		<div class="contain">
-			<ul>
+			<ul class="goodss">
 				<li>
+					<img src="img/1.jpg" alt="" />
+					<p>马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿</p>
+				</li>
+				<!--<li>
 					<img src="img/微服务架构图.png" alt="" />
 					<p>马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿</p>
 				</li>
@@ -233,12 +239,53 @@
 				<li>
 					<img src="img/微服务架构图.png" alt="" />
 					<p>马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿</p>
-				</li>
-				<li>
-					<img src="img/微服务架构图.png" alt="" />
-					<p>马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿</p>
-				</li>
+				</li>-->
 			</ul>
+			<script>
+				var obj = {
+					goods: [{
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					}, {
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					}, {
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					}, {
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					}, {
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					}, {
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					}, {
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					}, {
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					}, {
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					}, {
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					}, {
+						src: "img/1.jpg",
+						title: "马云深夜画了幅油画，被批丑的惨不忍赌，网友评价：再丑也值5个亿"
+					} ]
+				}
+				var goodss = document.getElementsByClassName("goodss");
+				var lis = goodss[0].children;
+				for(var i = 0; i < obj.goods.length; i++) {
+					var new_li = lis[0].cloneNode(true);
+					new_li.innerHTML = "<img src=\"" + obj.goods[i].src + "\" alt=\"\" /><p>"+obj.goods[i].title+"</p>";
+					goodss[0].appendChild(new_li);
+				}
+			</script>
 		</div>
 	</body>
 

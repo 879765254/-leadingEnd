@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin:0px;
+				padding: 0px;
+			}
+			table,tr,th,td{
+				border: 1px solid black;
+				border-collapse:collapse;
+				text-align: center;
+			}
+			th{
+				width: 200px;
+			}
+			table>tbody>tr>td>.close{
+				background: red;
+			}
+			table>tbody>tr>td>.edit{
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="add">新增</span>
+		<span class="all">全选</span>
+		<span class="inver">反选</span>
+		<span class="del">删除</span>
+		<form action="">
+			用户名：<input type="text" />
+			手机号:<input type="text" />
+			住址：<input type="text" />
+		</form>
+		<table>
+			<thead>
+				<tr>
+					<th>选择</th>
+					<th>姓名</th>
+					<th>手机号</th>
+					<th>住址</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="checkbox" class="check"/></td>
+					<td>张三</td>
+					<td>18998523766</td>
+					<td>加速器</td>
+					<td><span class="close" onclick="del(this)">x</span><span class="edit" onclick="edit(this)">编辑</span></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="check"/></td>
+					<td>张四</td>
+					<td>18998523766</td>
+					<td>加速器</td>
+					<td><span class="close" onclick="del(this)">x</span><span class="edit" onclick="edit(this)">编辑</span></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="check"/></td>
+					<td>张五</td>
+					<td>18998523766</td>
+					<td>加速器</td>
+					<td><span class="close" onclick="del(this)">x</span><span class="edit" onclick="edit(this)">编辑</span></td>
+				</tr>
+			</tbody>
+		</table>
+		<script>
+			var dels=document.getElementsByClassName("del");
+			var alls=document.getElementsByClassName("all");
+			var invers=document.getElementsByClassName("inver");
+			var checks=document.getElementsByClassName("check");
+			var inputs=document.getElementsByTagName("input");
+			var closes=document.getElementsByClassName("close");
+			var adds=document.getElementsByClassName("add");
+			var tbodys=document.getElementsByTagName("tbody");
+			function edit(e){
+				var clone_tr=e.parentNode.parentNode.cloneNode(true);
+				clone_tr.innerHTML="<td><input type=\"checkbox\" class=\"check\"/></td><td>"+inputs[0].value+"</td><td>"
+				+inputs[1].value+"</td><td>"+inputs[2].value+"</td><td><span class=\"close\" onclick=\"del(this)\">x</span><span class=\"edit\" onclick=\"edit(this)\">编辑</span></td>";
+				e.parentNode.parentNode.parentNode.replaceChild(clone_tr,e.parentNode.parentNode);
+			}
+			function del(e){
+				tbodys[0].removeChild(e.parentNode.parentNode);
+			}
+//			for(var i=0;i<closes.length;i++){
+//				closes[i].onclick=function(){
+//					this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+//				}
+//			}
+			dels[0].onclick=function(){
+				for(var i=0;i<checks.length;i++){
+					
+					if(checks[i].checked){
+						console.log(i);
+						checks[i].parentNode.parentNode.parentNode.removeChild(checks[i].parentNode.parentNode);
+						i--;
+					}
+				}
+			}
+			alls[0].onclick=function(){
+				for(var i=0;i<checks.length;i++){
+					checks[i].checked=true;
+				}
+			}
+			invers[0].onclick=function(){
+				for(var i=0;i<checks.length;i++){
+					checks[i].checked=!checks[i].checked;
+				}
+			}
+			adds[0].onclick=function(){
+				var new_tr=document.createElement("tr");
+				new_tr.innerHTML="<td><input type=\"checkbox\" class=\"check\"/></td><td>"+inputs[0].value+"</td><td>"
+				+inputs[1].value+"</td><td>"+inputs[2].value+"</td><td><span class=\"close\" onclick=\"del(this)\">x</span><span class=\"edit\" onclick=\"edit(this)\">编辑</span></td>";
+				tbodys[0].insertBefore(new_tr,tbodys[0].children[0]);
+			}
+		</script>
+	</body>
+</html>

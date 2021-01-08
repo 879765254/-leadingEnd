@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-3.5.1.js"></script>
+		<style>
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="testdiv">111111111111111111</div>
+		<button id="test">color</button>
+		<script>
+			$("#test").click(function(){
+//				$("div").css("margin-left","500px");
+//				animate     只可以用于设置  值为数值的样式
+alert();
+				$("#testdiv").animate({height:"300px"},2000);
+			})
+		</script>
+	</body>
+</html>
